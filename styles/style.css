@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+@media screen{
+
+	* {
+		box-sizing: border-box;
+		position: relative;
+	}
+
+	body{
+		margin: 0;
+		font-family: 'Open Sans', Arial, sans-serif;
+		width: auto;
+		max-width: none;
+		background-color: #fff;
+	}
+
+	.inside{
+		max-width: 960px;
+		width: 90%;
+		margin: 0 auto;
+		height: 100%;
+	}
+
+	img{
+		max-width: 100%;
+		max-height: 100%;
+	}
+
+	a{
+		color: #08c;
+		text-decoration: none;
+		outline: 0;
+		background: transparent;
+	}
+
+	a:hover{
+		text-decoration: underline;
+	}
+
+	a:hover > .genericon{
+		text-decoration: none;
+	}
+
+	a[href*="mailto:"]:before, .link[href*="mailto:"]:before{
+		content: "\f410";
+		font-family: "Genericons";
+		font-style: normal;
+		vertical-align: middle;
+	}
+
+	a[href*="tel:"]:before, .link[href*="tel:"]:before{
+		content: "\f50c";
+		font-family: "Genericons";
+		font-style: normal;
+		vertical-align: middle;
+	}
+
+	a[href*="http"]:before, .link[href*="http"]:before{
+		content: "\f475";
+		font-family: "Genericons";
+		font-style: normal;
+		vertical-align: middle;
+	}
+
+	header, footer, html{
+		background-color: #0d5c7c;
+	}
+
+	header{
+		padding: 10px;
+		border-bottom: 1px solid #cacaca;
+		width: 100%;
+	}
+
+	header h1{
+		margin: 0;
+	}
+
+	header h1 a{
+		color: inherit;
+	}
+
+	header h1 a:hover{
+		text-decoration: none;
+	}
+
+	.slogan{
+		margin: 0;
+		padding: 0;
+	}
+
+	main > .inside{
+		padding: 10px 0;
+	}
+
+	footer{
+		width: 100%;
+		padding: 20px 10px;
+		border-top: 1px solid #cacaca;
+	}
+
+	footer a{
+		color: #000;
+	}
+
+	article{
+		border-bottom: 1px dotted #cacaca;
+	}
+
+	article:last-child{
+		border: none;
+	}
+
+	table {
+		text-align: center;
+		margin-bottom: 10px;
+		line-height: 1;
+		background-color: #f9f9f9;
+		box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+		padding: 1em;
+		border-radius: 0;
+		margin-bottom: 2em;
+		overflow: auto;
+		width: 100%;
+	}
+
+	td, th {
+		padding: 5px !important;
+		border: 1px solid gainsboro;
+		border-collapse: collapse;
+	}
+
+	form {
+		line-height: 1;
+		padding: auto 1em;
+		margin-bottom: 2em;
+	}
+
+	form label {
+		display: block;
+		line-height: 1.7;
+		cursor: pointer;
+	}
+
+	form input[type="text"],
+	form input[type="password"],
+	form input[type="number"],
+	form input[type="email"],
+	form input[type="date"],
+	form input[type="file"],
+	form textarea,
+	form select {
+		min-width: 12em;
+		padding: 0.25em;
+		border: 1px solid #ccc;
+		border-radius: 0.25em;
+		margin-bottom: 1em;
+		display: inline;
+	}
+
+	form input[type="color"]{
+		padding: 0.25em;
+		border: 1px solid #ccc;
+		border-radius: 0.25em;
+		margin-bottom: 1em;
+		display: inline;
+	}
+
+	form input[type="checkbox"]{
+		margin-top: 0.35em;
+		border: 1px solid #ccc;
+		border-radius: 0.3em;
+	}
+
+	form textarea { min-width: 15em; }
+
+	form input[type="submit"], form input[type="button"], button, .button {
+		border: 0;
+		padding: 10px;
+		border-radius: 0.25em;
+		background-color: #eee;
+	}
+
+	button, .button{
+		border: 1px solid #999;
+		display: inline-block;
+	}
+
+	a.button{
+		color: inherit;
+	}
+
+	form input[type="submit"]:hover,
+	form input[type="submit"]:focus,
+	form input[type="button"]:hover,
+	form input[type="button"]:focus,
+	button:hover,
+	button:focus,
+	.button:hover,
+	.button:focus{
+		background-color: #ddd;
+		text-decoration: none;
+		-webkit-transition: background-color 0.2s;
+		-moz-transition:    background-color 0.2s;
+		-ms-transition:     background-color 0.2s;
+		-o-transition:      background-color 0.2s;
+	}
+
+	form input[type="submit"]:active,
+	form input[type="button"]:active,
+	button:active,
+	button:active a,
+	.button:active{
+		background-color: #ccc;
+		color: #fff;
+	}
+
+	.cf:before, .cf:after { content: " "; display: table; }
+	.cf:after, .clear { clear: both; }
+
+	.error{
+		color: #ff4524;
+	}
+
+	.success{
+		color: #2ee72f;
+		font-weight: bold;
+	}
+
+	.vm{
+		vertical-align: middle;
+	}
+
+	.pointer{
+		cursor: pointer;
+	}
+
+	.hover_no_underline:hover{
+		text-decoration: none;
+	}
+
+	.circular{
+		border-radius: 50%;
+	}
+
+} /* Ende Media Screen */
+
+@media print{
+
+} /* Ende Media Print */
