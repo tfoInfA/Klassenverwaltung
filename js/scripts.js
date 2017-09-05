@@ -14,6 +14,20 @@ function onLoad(){
 	console.info('Website by Matthias Thalmann. matthias.thalmann.bz.it');
 }
 
+function toggleMenu(){
+	var nav = document.getElementById('pagenav');
+	var btn = document.getElementById('header_menubutton');
+
+	if(nav.style.maxHeight == '300px'){
+		btn.className = btn.className.replace(" fa-rotate-180", "");
+		nav.style.maxHeight = '3px';
+	}
+	else {
+		btn.className += " fa-rotate-180";
+		nav.style.maxHeight = '300px';
+	}
+}
+
 /* Funktionen */
 
 /* Eventhandler */

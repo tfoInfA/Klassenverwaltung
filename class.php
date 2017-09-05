@@ -25,7 +25,7 @@
 
 <head>
 
-    <title>Startseite | Klassenverwaltung</title>
+    <title>Startseite - Klassenverwaltung</title>
 
     <meta charset="utf-8">
 
@@ -56,12 +56,22 @@
 
         <div class="inside">
 
-            <h1>Klassenverwaltung</h1>
-            <p class="slogan"><?=$_SESSION['user']['class']; ?></p>
+            <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+
+            <div id="header_text">
+                <h1><a href="class.php">Klassenverwaltung</a></h1>
+                <p class="slogan"><?=$_SESSION['user']['class']; ?></p>
+            </div>
+
+            <div class="clear"></div>
+
+            <a href="javascript:toggleMenu()" class="fa fa-angle-down" title="Men&uuml;" id="header_menubutton"></a>
 
         </div>
 
     </header>
+
+    <div id="header_offset"></div>
 
     <nav id="pagenav">
 
@@ -69,13 +79,36 @@
 
             <ul>
 
-                <li></li>
+                <li class="current"><a href="class.php" data-fa-icon="">Startseite</a></li>
+                <li><a href="klasse.php" data-fa-icon="">Klasse</a></li>
+                <li><a href="table.php" data-fa-icon="">Stundenplan</a></li>
+                <li><a href="exams.php" data-fa-icon="">Pr&uuml;fungen</a></li>
+                <li><a href="profile.php" data-fa-icon="">Profil</a></li>
 
             </ul>
 
         </div>
 
     </nav>
+
+    <main>
+
+        <div class="inside">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+
+    </main>
+
+    <footer>
+
+        <div class="inside">
+
+            <address><a href="mailto:test@example.com">test@example.com</a></address><a href="impressum.php">Impressum</a>
+            <small>© 2017 Klasse Informatik A. All Rights Reserved. By <a href="mailto:matthias@thalmann.bz.it">Matthias Thalmann</a></small>
+
+        </div>
+
+    </footer>
 
 </body>
 

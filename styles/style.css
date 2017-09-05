@@ -5,6 +5,12 @@
 	* {
 		box-sizing: border-box;
 		position: relative;
+
+		transition: all 0.2s;
+		-webkit-transition: all 0.2s;
+		-moz-transition:    all 0.2s;
+		-ms-transition:      all 0.2s;
+		-o-transition:         all 0.2s;
 	}
 
 	body{
@@ -38,43 +44,58 @@
 		text-decoration: underline;
 	}
 
-	a:hover > .genericon{
+	a:hover .fa{
 		text-decoration: none;
 	}
 
 	a[href*="mailto:"]:before, .link[href*="mailto:"]:before{
-		content: "\f410";
-		font-family: "Genericons";
+		content: "\f0e0";
+		font-family: "FontAwesome";
 		font-style: normal;
-		vertical-align: middle;
+		vertical-align: initial;
+		margin-right: 3px;
+		height: 100%;
 	}
 
 	a[href*="tel:"]:before, .link[href*="tel:"]:before{
-		content: "\f50c";
-		font-family: "Genericons";
+		content: "\f095";
+		font-family: "FontAwesome";
 		font-style: normal;
-		vertical-align: middle;
+		vertical-align: initial;
+		margin-right: 3px;
+		height: 100%;
 	}
 
 	a[href*="http"]:before, .link[href*="http"]:before{
-		content: "\f475";
-		font-family: "Genericons";
+		content: "\f0ac";
+		font-family: "FontAwesome";
 		font-style: normal;
-		vertical-align: middle;
+		vertical-align: initial;
+		margin-right: 3px;
+		height: 100%;
 	}
 
 	header, footer, html{
-		background-color: #0d5c7c;
+		background-color: #292929;
 	}
 
 	header{
 		padding: 10px;
-		border-bottom: 1px solid #cacaca;
 		width: 100%;
+		color: #dfdfdf;
+	}
+
+	header i.fa-graduation-cap{
+		font-size: 80px;
+		float: left;
+		margin-right: 10px;
+		cursor: pointer;
+		z-index: 1;
 	}
 
 	header h1{
 		margin: 0;
+		font-size: 32px;
 	}
 
 	header h1 a{
@@ -88,6 +109,82 @@
 	.slogan{
 		margin: 0;
 		padding: 0;
+		font-size: 16px;
+	}
+
+	header #header_menubutton{
+		color: inherit;
+		position: absolute;
+		right: 0;
+		top: calc(50% - 25px);
+		font-size: 50px;
+		width: 50px;
+		text-align: center;
+		border-radius: 25%;
+	}
+
+	header #header_menubutton:hover{
+		text-decoration: none;
+		border-radius: 50%;
+		background-color: #dfdfdf;
+		color: #292929;
+	}
+
+	nav#pagenav{
+		overflow: auto;
+		max-height: 3px;
+		background-color: #ff8b00;
+		-webkit-box-shadow: 0 4px 2px -2px gray;
+		-moz-box-shadow: 0 4px 2px -2px gray;
+		box-shadow: 0 4px 2px -2px gray;
+	}
+
+	nav#pagenav ul{
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		font-size: 0;
+	}
+
+	nav#pagenav ul li{
+		display: inline-block;
+		cursor: pointer;
+		background-color: inherit;
+		color: #292929;
+	}
+
+	nav#pagenav ul li:hover{
+		background-color: #f18300;
+		-webkit-box-shadow: inset 0 -1px 0 #000;
+	    -moz-box-shadow: inset 0 -1px 0 #000;
+	    box-shadow: inset 0 -1px 0 #000;
+	}
+
+	nav#pagenav ul li:hover a:before{
+		content: attr(data-fa-icon) " ";
+		font-family: "FontAwesome";
+	}
+
+	nav#pagenav ul li.current{
+		-webkit-box-shadow: inset 0 -2px 0 #000;
+	    -moz-box-shadow: inset 0 -2px 0 #000;
+	    box-shadow: inset 0 -2px 0 #000;
+	}
+
+	nav#pagenav ul li.current a:before{
+		content: attr(data-fa-icon) " ";
+		font-family: "FontAwesome";
+	}
+
+	nav#pagenav ul li a{
+		display: block;
+		padding: 15px 20px;
+		color: inherit;
+		font-size: 16px;
+	}
+
+	nav#pagenav ul li a:hover{
+		text-decoration: none;
 	}
 
 	main > .inside{
@@ -96,12 +193,8 @@
 
 	footer{
 		width: 100%;
+		color: #dfdfdf;
 		padding: 20px 10px;
-		border-top: 1px solid #cacaca;
-	}
-
-	footer a{
-		color: #000;
 	}
 
 	article{
@@ -228,16 +321,8 @@
 		font-weight: bold;
 	}
 
-	.vm{
-		vertical-align: middle;
-	}
-
 	.pointer{
 		cursor: pointer;
-	}
-
-	.hover_no_underline:hover{
-		text-decoration: none;
 	}
 
 	.circular{
@@ -245,6 +330,60 @@
 	}
 
 } /* Ende Media Screen */
+
+@media screen and (max-width: 600px) {
+	header{
+		text-align: center;
+	}
+
+	header h1{
+		font-size: 20px;
+	}
+
+	header i.fa-graduation-cap{
+		font-size: 40px;
+		display: block;
+		width: 100%;
+	}
+
+	header #header_menubutton{
+		position: relative;
+		width: 100%;
+		dsplay: block;
+		font-size: 30px;
+		margin-top: 10px;
+	}
+
+	header #header_menubutton:hover{
+		background-color: rgba(0, 0, 0, 0);
+		color: #dfdfdf;
+		text-shadow: 0px 0px 10px #fff;
+	}
+
+	nav#pagenav ul li{
+		display: block;
+		width: 100%;
+	}
+
+	nav#pagenav ul li{
+		display: block;
+		width: 100%;
+	}
+
+	nav#pagenav ul li:hover{
+		-webkit-box-shadow: inset 0 0 0 #000;
+	    -moz-box-shadow: inset 0 0 0 #000;
+	    box-shadow: inset 0 0 0 #000;
+		background-color: inherit;
+	}
+
+	nav#pagenav ul li.current{
+		-webkit-box-shadow: inset 0 0 0 #000;
+	    -moz-box-shadow: inset 0 0 0 #000;
+	    box-shadow: inset 0 0 0 #000;
+		font-weight: bold;
+	}
+} /* Ende Media Mobile Screen */
 
 @media print{
 
