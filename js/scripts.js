@@ -18,13 +18,13 @@ function toggleMenu(){
 	var nav = document.getElementById('pagenav');
 	var btn = document.getElementById('header_menubutton');
 
-	if(nav.style.maxHeight == '300px'){
+	if(nav.style.maxHeight == '400px'){
 		btn.className = btn.className.replace(" fa-rotate-180", "");
 		nav.style.maxHeight = '3px';
 	}
 	else {
 		btn.className += " fa-rotate-180";
-		nav.style.maxHeight = '300px';
+		nav.style.maxHeight = '400px';
 	}
 }
 

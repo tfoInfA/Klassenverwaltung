@@ -165,6 +165,11 @@
 		font-family: "FontAwesome";
 	}
 
+	.logout:before{
+		color: #ff0034;
+		text-shadow: 0 0 5px black;
+	}
+
 	nav#pagenav ul li.current{
 		-webkit-box-shadow: inset 0 -2px 0 #000;
 	    -moz-box-shadow: inset 0 -2px 0 #000;
@@ -331,7 +336,7 @@
 
 } /* Ende Media Screen */
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 915px) {
 	header{
 		text-align: center;
 	}

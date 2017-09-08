@@ -11,12 +11,15 @@
     include_once 'include/functions.php';
 
     if(!isset($_SESSION['user'])){
-        //header('Location: error/401.html');
-        //exit;
+        header('Location: error/401.html');
+        exit;
     }
 
-    //
-    $_SESSION['user']['class'] = '3Ia';
+    if(isset($_GET['action'])){
+        if($_GET['action'] == 'logout'){
+            logout($db, $_SESSION['user']['id'], 'index.php');
+        }
+    }
 
  ?>
 <!DOCTYPE html>
@@ -33,7 +36,7 @@
     <meta name="author" content="Matthias Thalmann">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="theme-color" content="#252525">
+    <meta name="theme-color" content="#292929">
 
     <link href="images/favicon.ico" rel="icon"/>
 
@@ -60,7 +63,7 @@
 
             <div id="header_text">
                 <h1><a href="class.php">Klassenverwaltung</a></h1>
-                <p class="slogan"><?=$_SESSION['user']['class']; ?></p>
+                <p class="slogan"><?=$_SESSION['user']['klasse'] . ' ' . $_SESSION['user']['school']; ?></p>
             </div>
 
             <div class="clear"></div>
@@ -84,6 +87,8 @@
                 <li><a href="table.php" data-fa-icon="">Stundenplan</a></li>
                 <li><a href="exams.php" data-fa-icon="">Pr&uuml;fungen</a></li>
                 <li><a href="profile.php" data-fa-icon="">Profil</a></li>
+                <li><a href="settings.php" data-fa-icon="">Einstellungen</a></li>
+                <li><a href="class.php?action=logout" data-fa-icon="" class="logout">Abmelden</a></li>
 
             </ul>
 
