@@ -353,7 +353,7 @@
 
 	header #header_menubutton{
 		position: relative;
-		width: 100%;
+		width: auto;
 		dsplay: block;
 		font-size: 30px;
 		margin-top: 10px;
