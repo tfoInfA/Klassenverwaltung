@@ -83,9 +83,13 @@
             <ul>
 
                 <li class="current"><a href="class.php" data-fa-icon="">Startseite</a></li>
-                <li><a href="klasse.php" data-fa-icon="">Klasse</a></li>
-                <li><a href="table.php" data-fa-icon="">Stundenplan</a></li>
-                <li><a href="exams.php" data-fa-icon="">Pr&uuml;fungen</a></li>
+                <li class="drop"><a data-fa-icon="" class="drop_desc">Klasse</a>
+                    <ul>
+                        <li><a href="klasse.php" data-fa-icon="">&Uuml;bersicht</a></li>
+                        <li><a href="table.php" data-fa-icon="">Stundenplan</a></li>
+                        <li><a href="exams.php" data-fa-icon="">Pr&uuml;fungen</a></li>
+                    </ul>
+                </li>
                 <li><a href="profile.php" data-fa-icon="">Profil</a></li>
                 <li><a href="settings.php" data-fa-icon="">Einstellungen</a></li>
                 <li><a href="class.php?action=logout" data-fa-icon="" class="logout">Abmelden</a></li>

@@ -34,7 +34,7 @@
 	}
 
 	a{
-		color: #08c;
+		color: #5bb4e1;
 		text-decoration: none;
 		outline: 0;
 		background: transparent;
@@ -131,7 +131,7 @@
 	}
 
 	nav#pagenav{
-		overflow: auto;
+		overflow: hidden;
 		max-height: 3px;
 		background-color: #ff8b00;
 		-webkit-box-shadow: 0 4px 2px -2px gray;
@@ -192,8 +192,87 @@
 		text-decoration: none;
 	}
 
+	nav#pagenav ul li.drop .drop_desc:after{
+		content: " \f103";
+		font-family: "FontAwesome";
+	}
+
+	nav#pagenav ul li.drop:hover .drop_desc:after{
+		content: " \f102";
+		font-family: "FontAwesome";
+	}
+
+	nav#pagenav ul li.drop:hover{
+		-webkit-box-shadow: none;
+	    -moz-box-shadow: none;
+		box-shadow: none;
+	}
+
+	nav#pagenav ul li.drop:hover ul{
+		-webkit-box-shadow: inset 0 -1px 0 #000;
+	    -moz-box-shadow: inset 0 -1px 0 #000;
+	    box-shadow: inset 0 -1px 0 #000;
+		max-height: 400px;
+	}
+
+	nav#pagenav ul li.drop ul li:hover{
+		-webkit-box-shadow: none;
+	    -moz-box-shadow: none;
+		box-shadow: none;
+		background-color: #d27301;
+	}
+
+	nav#pagenav ul li.drop ul li:hover a:before{
+		content: attr(data-fa-icon) " ";
+		font-family: "FontAwesome";
+	}
+
+	nav#pagenav ul li.drop ul{
+		position: absolute;
+		top: 100%;
+		min-width: 100%;
+		width: auto;
+		z-index: 1;
+		background-color: #f18300;
+		overflow: hidden;
+		max-height: 0;
+	}
+
+	nav#pagenav ul li.drop ul li{
+		width: 100%;
+	}
+
+	nav#pagenav ul li.drop ul li a{
+		white-space: nowrap;
+	}
+
+	nav#pagenav ul li.drop ul li a:before{
+		content: "";
+	}
+
 	main > .inside{
 		padding: 10px 0;
+	}
+
+	main #self{
+		position: absolute;
+		top: 0;
+		left: 0;
+		padding: 10px;
+		cursor: pointer;
+		background-color: #ccc;
+	}
+
+	main #self_nav{
+	}
+
+	main #self ul{
+		max-height: 0;
+		overflow: hidden;
+	}
+
+	main #self img{
+		height: 25px;
 	}
 
 	footer{
@@ -365,6 +444,10 @@
 		text-shadow: 0px 0px 10px #fff;
 	}
 
+	nav#pagenav{
+		overflow: scroll;
+	}
+
 	nav#pagenav ul li{
 		display: block;
 		width: 100%;
@@ -387,6 +470,19 @@
 	    -moz-box-shadow: inset 0 0 0 #000;
 	    box-shadow: inset 0 0 0 #000;
 		font-weight: bold;
+	}
+
+	nav#pagenav ul li.drop ul{
+		background-color: #ff8b00;
+		position: relative;
+	}
+
+	nav#pagenav ul li.drop:hover, nav#pagenav ul li.drop:hover ul{
+		background-color: #e78108;
+	}
+
+	nav#pagenav ul li.drop ul li a{
+		padding-left: 30px;
 	}
 } /* Ende Media Mobile Screen */
 
