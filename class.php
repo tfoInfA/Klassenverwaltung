@@ -87,7 +87,8 @@
                     <ul>
                         <li><a href="klasse.php" data-fa-icon="">&Uuml;bersicht</a></li>
                         <li><a href="table.php" data-fa-icon="">Stundenplan</a></li>
-                        <li><a href="exams.php" data-fa-icon="">Pr&uuml;fungen</a></li>
+                        <li><a href="exams.php" data-fa-icon="">Pr&uuml;fungen / Tests</a></li>
+                        <li><a href="homeworke.php" data-fa-icon="">Hausaufgaben</a></li>
                     </ul>
                 </li>
                 <li><a href="profile.php" data-fa-icon="">Profil</a></li>
